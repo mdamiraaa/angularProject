@@ -13,12 +13,6 @@ export class AllsessionsComponent implements OnInit {
     private router: Router,
     private service: RecordsService) { }
 
-    // deleteSession(arrayofsessions) {
-    //   for(var i=0;i<=cinema)
-    //   this.service.deleteCinema(id).subscribe(res => {
-    //     console.log('Deleted');
-    //   });
-    // }
 
   ngOnInit() {
     this.route.params.subscribe(params => {

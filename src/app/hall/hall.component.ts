@@ -14,29 +14,7 @@ import { Seat } from '../Models/seat';
 })
 export class HallComponent implements OnInit {
 
-  seats : Seat[] = [
-  {seat_id: 1,status:true},
-  {seat_id: 2,status:true},
-  {seat_id: 3,status:true},
-  {seat_id: 4,status:true},
-  {seat_id: 5,status:true},
-  {seat_id: 6,status:true},
-  {seat_id: 7,status:true},
-  {seat_id: 8,status:true},
-  {seat_id: 9,status:true},
-  {seat_id: 10,status:true},
-  {seat_id: 11,status:true},
-  {seat_id: 12,status:true},
-  {seat_id: 13,status:true},
-  {seat_id: 14,status:true},
-  {seat_id: 15,status:true},
-  {seat_id: 16,status:true},
-  {seat_id: 17,status:true},
-  {seat_id: 18,status:true},
-  {seat_id: 19,status:true},
-  {seat_id: 20,status:true},
-  ];
-
+  
   cinema: any = {};
   session;
   title: string;
@@ -73,7 +51,7 @@ export class HallComponent implements OnInit {
          this.column=something.data.hall.column;
 
          //this.updateSeats();
-        //this.changeColor();
+  
        
         
        }
@@ -86,12 +64,10 @@ export class HallComponent implements OnInit {
 
   test(cinema, session,row,col){
     this.ryad=row;
-    // this.myColor["background-color"]="red";
     this.mesto=col.seat_id+1;
     this.createTicket(session,row,col.seat_id+1);
     // col.status=false;
     // console.log(col);
-    //this.changeColor(column.seat_id);
     //this.updateSeats();
   }
 createTicket(session,row,column){
@@ -127,15 +103,6 @@ updateSeats(){
   }
 }
 
-  // changeColor(id){
 
-  //     console.log(this.column[id].status);
-  //   if(this.column[id].status===false){
-  //     this.myColor={"background-color":"red"};
-  //   }
-  //   else{
-  //     this.myColor={"background-color":"white"};
-  //   }
-  // }
 }
 

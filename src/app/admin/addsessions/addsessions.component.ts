@@ -47,17 +47,7 @@ export class AddsessionsComponent implements OnInit {
     });
   });
   }
-  // addCStudent(){
 
-  //   console.log(parseInt(this.selectedOption)-1);
-  //   console.log(this.course.id);
-    
-  //   //this.courses[this.course.id-1].students.push(this.selectedOption);
-  //   this.courses[this.course.id-1].students.push(this.stud[parseInt(this.selectedOption)-1]);
-  //   let s=this.stud[parseInt(this.selectedOption)-1];
-  //   console.log(s);
-   
-  //    }
   onChange(event):void{
     this.chFilm= event.target.value;
     for(var i=0;i<this.films.length;i++){

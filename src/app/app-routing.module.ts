@@ -10,7 +10,6 @@ import { HallComponent } from './hall/hall.component';
 import {AdminModule} from './admin/admin.module';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { SheduleComponent } from './shedule/shedule.component';
-import { FilmComponent } from './film/film.component';
 import { FilminfoComponent } from './filminfo/filminfo.component';
 
 
@@ -23,7 +22,7 @@ const routes: Routes = [
     { path: 'cinema', component: CinemaComponent },
     { path: 'schedule/ticket/card', component: CardinfoComponent },
     { path: 'schedule/ticket', component: BuyticketComponent },
-    { path: ':id/planzala/:sid', component: HallComponent },
+    // { path: ':id/planzala/:sid', component: HallComponent },
     { path: 'sessions/:id', component: SessionsComponent},
     { path: 'filminfo', component: FilminfoComponent}
 

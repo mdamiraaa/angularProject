@@ -14,8 +14,6 @@ import {Seat} from '../../Models/seat';
 export class AddhallsComponent implements OnInit {
 halls=HALL;
 hall:Hall;
-// columns=[];
-// rows=[];
 seat:Seat;
 
 cinema: any = {};
@@ -32,17 +30,6 @@ f:any;
     });
   });
   }
-
-
-
-//   addHall(){
-//     console.log(this.halls[parseInt(this.selectedHall)-1])
-//   let h=this.halls[parseInt(this.selectedHall)-1]
-//     this.route.params.subscribe(params => {
-//       this.service.addHall(h, params['id']);
-     
-//    });
-// }
 
 createHall(id,name,num_column,num_row){
   console.log(id,name,num_row,num_column);

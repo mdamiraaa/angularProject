@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cinema } from '../Models/cinema';
-import {CINEMA} from '../Models/cinema-list';
+
 import {ActivatedRoute} from '@angular/router';
 import { CinemaService } from '../cinema.service';
 import { Location } from '@angular/common';
@@ -44,13 +44,7 @@ export class SessionsComponent implements OnInit {
  
   }
 
-  // getCinema(){
-  //   this.route.params.subscribe(params => {
-  //     this.service.editCinema(params['id']).subscribe(res => {
-  //       this.cinema = res;
-  //   });
-  // });
-  // }
+
   goBack(): void {
     this.location.back();
   }

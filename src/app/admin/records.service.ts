@@ -8,8 +8,6 @@ import {Film} from './filmindex/Film'
 })
 export class RecordsService {
 
-  arrayofsessions=[];
-  arrayofhalls=[];
 
   uri = 'http://localhost:4000/adunits';
 
@@ -111,8 +109,8 @@ export class RecordsService {
         hall:Hall,
         price:Price
         };
-        //this.arrayofsessions.push(obj);
-        console.log(this.arrayofsessions);
+    
+     
         this
           .http
           .post(`${this.uri}/addsession/${id}`, obj)
@@ -135,8 +133,8 @@ export class RecordsService {
           row:rows,
           column:columns
           };
-        //this.arrayofhalls.push(obj);
-        console.log(this.arrayofhalls);
+      
+    
         this
           .http
           .post(`${this.uri}/addhall/${id}`, obj)

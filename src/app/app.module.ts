@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CinemaComponent } from './cinema/cinema.component';
-import { FilmComponent } from './film/film.component';
 import { SessionsComponent } from './sessions/sessions.component';
 import { HallComponent } from './hall/hall.component';
 import { BuyticketComponent } from './buyticket/buyticket.component';
@@ -42,7 +41,6 @@ import { FilminfoComponent } from './filminfo/filminfo.component';
   declarations: [
     AppComponent,
     CinemaComponent,
-    FilmComponent,
     SessionsComponent,
     HallComponent,
     BuyticketComponent,
