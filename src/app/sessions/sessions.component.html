@@ -1,0 +1,85 @@
+<div class="col-md-8" style="float: left;">
+<h1>{{cinema.cinema_name}}</h1>
+<label>{{cinema.cinema_address}}</label>
+<tabset type="pills">
+  <tab heading="По фильмам">
+  
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>Film</td>
+        <td><p>Date </p><p>Time</p><p>Price</p> </td>
+        <!-- <td>Time</td>
+        <td>Price</td> -->
+        <!-- <td colspan="1">Actions</td> -->
+    </tr>
+    </thead>
+  
+    <tbody>
+      
+      <tr *ngFor="let session of cinema.sessions | groupBy: 'film.film_name' | pairs">
+        <td (click)="openModal2(session[0])"> {{session[0]}} </td>
+          <div class="row" *ngFor="let s of session[1]">
+        
+        <td>{{ s.date }}</td>
+        <td>{{ s.time}}</td>
+        <td>{{s.price}}</td>
+  
+       
+        <td><button  class="btn btn-danger"  
+          (click)="openModal(s)">Купить билет</button>
+       </div>
+       <!-- routerLink="/{{cinema._id}}/planzala/{{s.id}}"  -->
+  </tr>
+    </tbody>
+  </table>
+</tab>
+
+  <tab heading="По залам">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <td>Zal</td>
+        <td>Film</td>
+          <!-- <td>Date</td>
+          <td>Time</td>
+          <td>Price</td>
+          <td colspan="1">Actions</td> -->
+      </tr>
+      </thead>
+    
+      <tbody>
+        
+        <tr *ngFor="let session of cinema.sessions | groupBy: 'hall.name' | pairs">
+          <td class="zal">{{session[0]}}</td>
+          <div class="row" *ngFor="let s of session[1]">
+          <td class="film">{{s.film.film_name}}</td>
+          <td class="date">{{ s.date }}</td>
+          <td class="time">{{ s.time}}</td>
+          <td class="price">{{s.price}}</td>
+    
+         
+          <td><button  class="btn btn-danger"  (click)="openModal(s)" >Купить билет</button></td>
+         </div>
+         
+    </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <!-- <div class="row" *ngFor="let session of cinema.sessions | groupBy: 'hall.name' | pairs">
+    <div>Film: {{session[0]}}
+    <div class="row" *ngFor="let s of session[1]">
+      <br>
+      <div>Task: {{s.price}}</div>
+    </div>
+  </div>
+  </div> -->
+</tab>
+</tabset>
+</div>
+ 

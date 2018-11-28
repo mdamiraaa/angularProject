@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{film.film_name}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  
+
+    <img class="d-block " src="{{film.film_image}}"alt="Third slide"  style="width:350px;height:450px; margin-left: 10%">
+    <div>
+      <label class="tags">Производство </label>
+      {{film.film_studio}}</div>
+    <div>
+      <label class="tags">Жанр </label>
+      {{film.film_genre}}</div>
+    <div>
+      <label class="tags">Возраст </label>
+      {{film.film_limit}}</div>
+    <div>
+      <label class="tags">Формат </label>
+      {{film.film_format}}</div>
+    
+    <div><p class="tags">Описание</p>{{film.film_desc}}</div>
+  
+
+
+ 
+  
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Закрыть</button>
+</div>
+

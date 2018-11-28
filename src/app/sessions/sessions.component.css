@@ -1,0 +1,19 @@
+p{
+    float: left;
+    margin-right: 50px;
+}
+.film{
+    width: 300px;
+}
+.date{
+    width: 150px;
+}
+.time{
+    width: 50px;
+}
+.price{
+    width: 50px;
+}
+.zal{
+    width: 150px;
+}

@@ -1,0 +1,56 @@
+<app-menu></app-menu>
+
+<div class="card" style="width:70%; margin-left: 15%">
+  <h5 class="card-header">Купить билет</h5>
+  <div class="row">
+  <div class="col-sm-6">
+  <div class="card-body">
+    <h5 class="card-title">Билет</h5>
+    <div>
+    <label class="tags"> Фильм</label>
+    {{ticket.film}}</div>
+    <div>
+      <label class="tags"> Дата</label>
+      {{ticket.date}}</div>
+    <div>
+      <label class="tags"> Время</label>
+      {{ticket.time}}</div>
+    <div>
+        <label class="tags">Место</label>
+      {{ticket.place}}</div>
+      <div>
+        <label class="tags">Цена</label>
+      {{ticket.price}}</div>
+  </div>
+</div>
+<div class="col-sm-6">
+  <div class="card-body">
+    <h5 class="card-title">Оформить билет</h5>
+    <div>
+    <label class="lbl">Email</label>
+    <label class="tagss">
+    <input type="text">
+    На него будет отправлен ваш билет и инструкция</label>
+  </div>
+  <div>
+    <label class="lbl">Phone</label>
+    <label class="tagss">
+    <input type="text">
+    На него придет электронный билет</label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" class="option-input checkbox" checked />
+      Я согласен с условиями <a>соглашения</a>
+    </label>
+    
+    
+  </div>
+    <a href="#" class="btn btn-primary" routerLink="/schedule/ticket/card" >Далее</a>
+  </div>
+</div>
+</div>
+</div>
+
+
+

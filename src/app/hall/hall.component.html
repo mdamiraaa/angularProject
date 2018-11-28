@@ -1,0 +1,43 @@
+<style>
+
+  .seat-free{
+    background-color: green;
+  }
+
+  .seat-notfree{
+    background-color: red;
+  }
+
+</style>
+
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Выберите место</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <table class="wrapper">
+    <thead>
+      <th *ngFor = 'let i of column'></th>
+    </thead>
+    <tbody>
+      <tr class="row" *ngFor = 'let r of row'>{{r}}<br>
+        <td *ngFor="let seat of column" class="box" ><button (click)="test(cinema,session,r,seat)" [class]="seatColor">{{seat.seat_id+1}}</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <div class="row">
+    <div *ngFor="let seat of seats" class="col-1">
+      <div>{{ seat.seat_id }}</div>
+    </div>
+  </div> -->
+
+
+  <label>{{ryad}} Место {{mesto}}</label>
+  
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()" routerLink="schedule/ticket">Далее</button>
+</div>
+

@@ -1,0 +1,18 @@
+
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+// Define collection and schema for AdUnits
+let Film = new Schema({
+  
+  unit_name: {
+    type: String
+  },
+  unit_price: {
+    type: Number
+  }
+},{
+    collection: 'adunits'
+});
+
+module.exports = mongoose.model('AdUnit', AdUnit);

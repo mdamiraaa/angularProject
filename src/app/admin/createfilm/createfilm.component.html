@@ -1,0 +1,71 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Film Name</label>
+        <input type="text" class="form-control" name="film_name" formControlName="film_name" #film_name/>
+      </div>
+      <div *ngIf="angForm.controls['film_name'].invalid && (angForm.controls['film_name'].dirty || angForm.controls['film_name'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['film_name'].errors.required">
+          Film Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Duration</label>
+        <input type="text" class="form-control" name="film_duration" formControlName="film_duration" #film_duration/>
+      </div>
+      <div *ngIf="angForm.controls['film_duration'].invalid && (angForm.controls['film_duration'].dirty || angForm.controls['film_duration'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['film_duration'].errors.required">
+          Duration is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Studio</label>
+        <input type="text" class="form-control" name="film_studio" formControlName="film_studio" #film_studio/>
+      </div>
+      <div *ngIf="angForm.controls['film_studio'].invalid && (angForm.controls['film_studio'].dirty || angForm.controls['film_studio'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['film_studio'].errors.required">
+           required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Limit</label>
+        <input type="text" class="form-control" name="film_limit" formControlName="film_limit" #film_limit/>
+      </div>
+      <div *ngIf="angForm.controls['film_limit'].invalid && (angForm.controls['film_limit'].dirty || angForm.controls['film_limit'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['film_limit'].errors.required">
+           required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Format</label>
+        <input type="text" class="form-control" name="film_format" formControlName="film_format" #film_format/>
+      </div>
+      <div *ngIf="angForm.controls['film_format'].invalid && (angForm.controls['film_format'].dirty || angForm.controls['film_format'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['film_format'].errors.required">
+           required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Genre</label>
+        <input type="text" class="form-control" name="film_genre" formControlName="film_genre" #film_genre/>
+      </div>
+      <div *ngIf="angForm.controls['film_genre'].invalid && (angForm.controls['film_genre'].dirty || angForm.controls['film_genre'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['film_genre'].errors.required">
+           required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Image</label>
+        <input type="text" class="form-control" name="film_image" formControlName="film_image" #film_image/>
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Description</label>
+          <input type="text" class="form-control" name="film_desc" formControlName="film_desc" #film_desc/>
+        </div>
+      <div class="form-group">
+        <button (click)="addFilm(film_name.value,film_duration.value,film_studio.value,film_limit.value,film_format.value,film_genre.value,film_image.value,film_desc.value)" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary">Create Film</button>
+      </div>
+    </form>
+  </div>
+</div>

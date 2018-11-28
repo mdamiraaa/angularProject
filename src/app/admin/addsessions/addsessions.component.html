@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Cinema Name</label>
+        <input type="text" class="form-control" name="cinema_name" formControlName="cinema_name" #cinema_name  [(ngModel)]="cinema.cinema_name"/>
+      </div>
+      <div *ngIf="angForm.controls['cinema_name'].invalid && (angForm.controls['cinema_name'].dirty || angForm.controls['cinema_name'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['cinema_name'].errors.required">
+          Cinema Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Address</label>
+        <input type="text" class="form-control" name="cinema_address" formControlName="cinema_address" #cinema_address [(ngModel)] = "cinema.cinema_address"/>
+      </div>
+      <div *ngIf="angForm.controls['cinema_address'].invalid && (angForm.controls['cinema_address'].dirty || angForm.controls['cinema_address'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['cinema_address'].errors.required">
+          Duration is required.
+        </div>
+      </div>
+      <label for="name">Add Sessions</label><br>
+      <div>
+        <label>Id</label>
+        <input type="input" class="form-control" name="id" #id/>
+    </div>
+      <div class="form-group">
+     
+        <label>Film</label>
+     
+        <select id="cinema" name="film" (change)="onChange($event)">
+          <option *ngFor="let film of films" [value]="film.film_name" >{{film.film_name}}</option>
+        </select>
+        </div>
+        <div>
+          <label>Date</label>
+          <input type="date" class="form-control" name="date"  (change)="onChangedate($event)"/>
+      </div>
+      <div >
+        <label>Time</label>
+        <input type="time" class="form-control" name="time" (change)="onChangetime($event)"/>
+    </div>
+    <div class="form-group">
+      <label>Hall</label>
+      <select id="cinema" name="hall"  (change)="onChangehall($event)">
+        <option *ngFor="let hall of cinema.halls" [value]="hall.id" >{{hall.name}}</option>
+      </select>
+      </div>
+      <div>
+        <label>Стоимость билета</label>
+        <input type="input" class="form-control" name="id" #price/>
+    </div>
+
+        <div class="form-group">
+              <button (click)="addSession(id.value,price.value)" class="btn btn-primary">Add Session</button>
+        </div>
+    </form>
+   </div>
+</div>
